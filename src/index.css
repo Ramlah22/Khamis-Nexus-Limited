@@ -1,0 +1,41 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+@keyframes marquee {
+  0% { transform: translateX(100%); }
+  100% { transform: translateX(-100%); }
+}
+
+.animate-marquee {
+  display: inline-flex;
+  min-width: 100%;
+  animation: marquee 18s linear infinite;
+}
+
+html, body {
+  overflow-x: hidden;
+  font-family: roboto;
+}
+
+.roboto {
+  font-family: "Roboto", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 400;
+  font-style: normal;
+  font-variation-settings:
+    "wdth" 100;
+}
+
+[data-aos] {
+  overflow-anchor: none;
+   backface-visibility: hidden;
+     transform-style: preserve-3d;
+}
+
+marquee {
+  display: block;
+  max-width: 100vw; /* prevents overshooting screen width */
+  overflow: hidden;
+}
